@@ -1,0 +1,6 @@
+com/sainsburys/transformers/Person$Builder.class
+com/sainsburys/transformers/Person.class
+com/sainsburys/transformers/Person$1.class
+com/sainsburys/transformers/sender/KafkaProducer.class
+com/sainsburys/transformers/AvroProducerApplication.class
+com/sainsburys/transformers/config/KafkaProducerConfig.class
