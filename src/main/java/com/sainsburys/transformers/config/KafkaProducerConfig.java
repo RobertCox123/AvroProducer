@@ -1,5 +1,6 @@
 package com.sainsburys.transformers.config;
 
+import com.acme.avro.STSSales;
 import com.sainsburys.transformers.model.Person;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -23,7 +24,8 @@ import java.util.Map;
 public class KafkaProducerConfig {
 
     @Bean
-    public ProducerFactory<String, Person> producerFactory() {
+    //public ProducerFactory<String, Person> producerFactory() {
+        public ProducerFactory<String, STSSales> producerFactory() {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(
                 ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
@@ -43,7 +45,8 @@ public class KafkaProducerConfig {
     }
 
     @Bean
-    public KafkaTemplate<String, Person> kafkaTemplate() {
+    //public KafkaTemplate<String, Person> kafkaTemplate() {
+        public KafkaTemplate<String, STSSales> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 

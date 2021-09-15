@@ -1,5 +1,6 @@
 package com.sainsburys.transformers.Controller;
 
+import com.acme.avro.STSSales;
 import com.sainsburys.transformers.model.Person;
 import com.sainsburys.transformers.sender.ProducerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +50,8 @@ public class KafkaAvroController {
     //@PostMapping("/")
     //@ResponseBody
     @PostMapping(value = "postMapping")
-    public String kafkaMessage(@RequestBody Person message) {
+    //public String kafkaMessage(@RequestBody Person message) {
+        public String kafkaMessage(@RequestBody STSSales message) {
         producerService.sendMessage(message);
         return "Success";
     }
